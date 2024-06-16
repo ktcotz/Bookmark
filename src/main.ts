@@ -1,2 +1,8 @@
 import "./style/style.scss";
-import "./ts/navigation";
+import { Navigation } from "./ts/navigation";
+
+const init = () => {
+  new Navigation().initialize();
+};
+
+init();
