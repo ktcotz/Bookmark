@@ -1,5 +1,5 @@
 import "./style/style.scss";
-import { Navigation } from "./ts/navigation";
+import { Navigation } from "./ts/Navigation";
 
 const init = () => {
   new Navigation().initialize();
