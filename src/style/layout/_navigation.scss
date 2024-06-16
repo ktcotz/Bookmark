@@ -19,19 +19,25 @@
     gap: var(--4xl-fs);
 
     @include media($bp-mobile) {
-      display: none;
+      background-color: var(--color-headings);
+      border-radius: 9px;
+      flex-direction: column;
+      flex: 0 0 100%;
+      order: 1;
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
+
+      transition: var(--transition-duration);
     }
   }
 
   &--mobile &__list {
     @include media($bp-mobile) {
-      display: flex;
-      order: 1;
-      flex: 0 0 100%;
-      flex-direction: column;
-      background-color: var(--color-headings);
+      max-height: 19rem;
       padding: var(--3xl-fs);
-      border-radius: 9px;
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
