@@ -1,0 +1,67 @@
+@use "./../../abstracts/mixins" as *;
+@use "./../../abstracts/variables" as *;
+
+.link {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+  }
+  &--navigation {
+    &:link,
+    &:visited {
+      --local-color: var(--color-universal-dark);
+
+      font-size: var(--small-fs);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--local-color);
+
+      transition: color var(--transition-duration);
+      @include media($bp-mobile) {
+        --local-color: var(--color-neutral);
+      }
+    }
+
+    &:hover {
+      --local-color: hsl(229, 5%, 42%);
+      @include media($bp-mobile) {
+        --local-color: hsl(0, 0%, 80%);
+      }
+    }
+  }
+
+  &--general {
+    &:link,
+    &:visited {
+      padding: var(--smallest-fs) var(--3xl-fs);
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+        0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+  }
+
+  &--primary {
+    &:link,
+    &:visited {
+      --local-background: var(--color-secondary);
+      background-color: var(--local-background);
+      color: var(--color-neutral);
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: var(--small-fs);
+
+      transition: var(--transition-duration);
+    }
+
+    &:focus-within {
+      outline: 2px solid var(--local-background);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      --local-background: hsl(0, 48%, 46%);
+    }
+  }
+}

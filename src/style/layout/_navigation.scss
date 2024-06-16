@@ -1,0 +1,37 @@
+@use "./../abstracts/mixins" as *;
+@use "./../abstracts/variables" as *;
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--3xl-fs) 0;
+
+  @include media($bp-mobile) {
+    flex-wrap: wrap;
+    gap: var(--3xl-fs);
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: var(--4xl-fs);
+
+    @include media($bp-mobile) {
+      display: none;
+    }
+  }
+
+  &--mobile &__list {
+    @include media($bp-mobile) {
+      display: flex;
+      order: 1;
+      flex: 0 0 100%;
+      flex-direction: column;
+      background-color: var(--color-headings);
+      padding: var(--3xl-fs);
+      border-radius: 9px;
+    }
+  }
+}

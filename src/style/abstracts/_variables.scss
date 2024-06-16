@@ -3,8 +3,11 @@
   --color-secondary: hsl(0, 94%, 66%);
   --color-headings: hsl(229, 31%, 21%);
   --color-universal: hsl(229, 8%, 60%);
+  --color-universal-dark: hsl(231, 5%, 48%);
   --color-neutral: hsl(255, 100%, 100%);
   --primary-font-family: "Rubik", sans-serif;
+
+  --transition-duration: 300ms;
 
   --5xl-fs: 2.986rem;
   --4xl-fs: 2.488rem;
@@ -16,3 +19,5 @@
   --small-fs: 0.833rem;
   --smallest-fs: 0.694rem;
 }
+
+$bp-mobile: 42rem;

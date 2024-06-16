@@ -1,0 +1,15 @@
+@use "./../../abstracts/mixins" as *;
+@use "./../../abstracts/variables" as *;
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  &--hamburger {
+    display: none;
+
+    @include media($bp-mobile) {
+      display: flex;
+    }
+  }
+}
