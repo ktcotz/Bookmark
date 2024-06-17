@@ -1,0 +1,26 @@
+@use "./../../abstracts/mixins" as *;
+@use "./../../abstracts/variables" as *;
+
+.decoration {
+  --height: 16rem;
+  --width: 62.5rem;
+  position: absolute;
+  z-index: -1;
+  height: var(--height);
+  width: var(--width);
+  background-color: var(--color-primary);
+  border-top-left-radius: 100rem;
+  border-bottom-left-radius: 100rem;
+
+  @include media($bp-medium) {
+    --height: 12rem;
+  }
+
+  &--right {
+    --y: 70%;
+    --x: 150%;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+  }
+}
