@@ -1,7 +1,16 @@
+@use "./../../abstracts/mixins" as *;
+@use "./../../abstracts/variables" as *;
+
 .wrapper {
   --width: 71.25rem;
 
   max-width: var(--width);
   margin: 0 auto;
   padding: 0 var(--default-fs);
+
+  &--hero {
+    @include media($bp-mobile) {
+      --width: 35rem;
+    }
+  }
 }

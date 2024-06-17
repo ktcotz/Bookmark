@@ -35,9 +35,23 @@
   &--general {
     &:link,
     &:visited {
-      padding: var(--smallest-fs) var(--3xl-fs);
+      padding: var(--small-fs) var(--3xl-fs);
       box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
         0 2px 4px -2px rgb(0 0 0 / 0.1);
+      border-radius: 4px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: var(--small-fs);
+
+      transition: var(--transition-duration);
+
+      @include media($bp-medium) {
+        padding: var(--small-fs) var(--2xl-fs);
+      }
+
+      @include media($bp-smallest) {
+        padding: var(--small-fs) var(--xl-fs);
+      }
     }
   }
 
@@ -47,12 +61,7 @@
       --local-background: var(--color-secondary);
       background-color: var(--local-background);
       color: var(--color-neutral);
-      border-radius: 4px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: var(--small-fs);
-
-      transition: var(--transition-duration);
     }
 
     &:focus-within {
@@ -62,6 +71,42 @@
 
     &:hover {
       --local-background: hsl(0, 48%, 46%);
+    }
+  }
+
+  &--secondary {
+    &:link,
+    &:visited {
+      --local-background: var(--color-primary);
+      background-color: var(--local-background);
+      color: var(--color-neutral);
+    }
+
+    &:focus-within {
+      outline: 2px solid var(--local-background);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      --local-background: hsl(231, 54%, 54%);
+    }
+  }
+
+  &--tertiary {
+    &:link,
+    &:visited {
+      --local-background: var(--color-neutral);
+      background-color: var(--local-background);
+      color: var(--color-headings);
+    }
+
+    &:focus-within {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      --local-background: hsl(0, 0%, 90%);
     }
   }
 }

@@ -1,0 +1,45 @@
+@use "./../../abstracts/mixins" as *;
+@use "./../../abstracts/variables" as *;
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: var(--5xl-fs);
+
+  @include media($bp-mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  &__description {
+    color: var(--color-universal-dark);
+    margin-bottom: var(--4xl-fs);
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: var(--2xl-fs);
+    @include media($bp-mobile) {
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    @include media($bp-mobile) {
+      text-align: center;
+    }
+  }
+
+  &__image-container {
+    position: relative;
+    @include media($bp-mobile) {
+      order: -1;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+}

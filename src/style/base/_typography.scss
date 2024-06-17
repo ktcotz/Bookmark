@@ -1,0 +1,13 @@
+@use "./../abstracts/mixins" as *;
+@use "./../abstracts/variables" as *;
+
+.heading__primary {
+  font-size: var(--4xl-fs);
+  line-height: 1.15;
+  color: var(--color-headings);
+  margin-bottom: var(--2xl-fs);
+
+  @include media($bp-smallest) {
+    font-size: var(--3xl-fs);
+  }
+}
