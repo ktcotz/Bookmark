@@ -2,11 +2,16 @@
 @use "./../abstracts/variables" as *;
 
 .section-hero {
-  --general-padding: 6rem;
   position: relative;
   padding: var(--general-padding) 0;
 
   @include media($bp-mobile) {
     padding: 0 0 var(--general-padding) 0;
   }
+}
+
+.section-features {
+  --general-padding: 2rem;
+  position: relative;
+  padding: var(--general-padding) 0;
 }

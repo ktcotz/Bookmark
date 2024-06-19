@@ -11,3 +11,17 @@
     font-size: var(--3xl-fs);
   }
 }
+
+.heading__secondary {
+  font-size: var(--3xl-fs);
+  line-height: 1.15;
+  color: var(--color-headings);
+  margin-bottom: var(--2xl-fs);
+}
+
+.heading__tertiary {
+  font-size: var(--2xl-fs);
+  line-height: 1.15;
+  color: var(--color-headings);
+  margin-bottom: var(--2xl-fs);
+}

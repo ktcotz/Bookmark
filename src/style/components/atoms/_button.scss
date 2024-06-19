@@ -12,4 +12,27 @@
       display: flex;
     }
   }
+
+  &--features,
+  &--active {
+    padding: var(--xl-fs) var(--5xl-fs);
+    color: var(--color-universal-dark);
+    border-bottom: 3px solid transparent;
+    transition: var(--transition-duration);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: var(--color-secondary);
+      color: var(--color-headings);
+    }
+  }
+
+  &--active {
+    border-color: var(--color-secondary);
+    color: var(--color-headings);
+  }
 }

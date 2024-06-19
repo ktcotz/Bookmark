@@ -8,9 +8,14 @@
   margin: 0 auto;
   padding: 0 var(--default-fs);
 
-  &--hero {
+  &--hero,
+  &--features {
     @include media($bp-mobile) {
       --width: 35rem;
     }
+  }
+
+  &--features-typography {
+    --width: 35rem;
   }
 }
