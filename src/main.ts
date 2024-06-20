@@ -1,6 +1,6 @@
 import "./style/style.scss";
-import { Features } from "./ts/Features";
-import { Navigation } from "./ts/Navigation";
+import { Features } from "./ts/features";
+import { Navigation } from "./ts/navigation";
 
 const init = () => {
   new Navigation().initialize();
