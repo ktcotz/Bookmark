@@ -3,8 +3,6 @@ type FeaturesPossibility = 0 | 1 | 2;
 export class Features {
   private ACTIVE_FEATURE_MODIFIER = "btn--active";
 
-  private parentElement =
-    document.querySelector<HTMLDivElement>(".features__nav");
   private featuresButtons =
     document.querySelectorAll<HTMLButtonElement>(".btn--features");
   private currentFeature: FeaturesPossibility = 0;
@@ -13,7 +11,8 @@ export class Features {
   private contentDOM = {
     image: document.querySelector<HTMLImageElement>(".features__image"),
     title: document.querySelector<HTMLHeadingElement>(".features__title"),
-    desription: document.querySelector<HTMLParagraphElement>(".features__text"),
+    description:
+      document.querySelector<HTMLParagraphElement>(".features__text"),
   };
 
   initialize() {
@@ -49,14 +48,11 @@ export class Features {
   }
 
   private addEventListeners() {
-    this.parentElement?.addEventListener("click", (ev) => {
-      if (!ev.target) return;
-
-      if (!(ev.target instanceof HTMLButtonElement)) return;
-
-      this.removeAllFeaturesFromActive();
-
-      this.changeCurrentFeature(ev.target);
+    this.featuresButtons.forEach((button) => {
+      button?.addEventListener("click", () => {
+        this.removeAllFeaturesFromActive();
+        this.changeCurrentFeature(button);
+      });
     });
   }
 
@@ -72,9 +68,9 @@ export class Features {
 
     this.contentDOM.title.textContent = feature.title;
 
-    if (!this.contentDOM.desription) return;
+    if (!this.contentDOM.description) return;
 
-    this.contentDOM.desription.textContent = feature.description;
+    this.contentDOM.description.textContent = feature.description;
   }
 }
 
