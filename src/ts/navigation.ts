@@ -44,7 +44,7 @@ export class Navigation {
     const isOpen = this.isOpen();
     this.hamburgerButtonIcon?.setAttribute(
       "src",
-      `./src/assets/images/icon-${isOpen ? "close" : "hamburger"}.svg`
+      `./assets/images/icon-${isOpen ? "close" : "hamburger"}.svg`
     );
   }
 
