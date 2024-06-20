@@ -3,7 +3,8 @@ type FeaturesPossibility = 0 | 1 | 2;
 export class Features {
   private ACTIVE_FEATURE_MODIFIER = "btn--active";
 
-  private parentElement = document.querySelector<HTMLDivElement>(".features");
+  private parentElement =
+    document.querySelector<HTMLDivElement>(".features__nav");
   private featuresButtons =
     document.querySelectorAll<HTMLButtonElement>(".btn--features");
   private currentFeature: FeaturesPossibility = 0;

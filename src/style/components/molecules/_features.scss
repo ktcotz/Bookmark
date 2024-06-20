@@ -22,13 +22,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    margin: 0 auto;
     border-bottom: 1px solid var(--color-universal);
 
     @include media($bp-mobile) {
       flex-direction: column;
       width: 70%;
+      margin: 0 auto;
       border-bottom: 0;
     }
   }
