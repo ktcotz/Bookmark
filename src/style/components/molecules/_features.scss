@@ -10,6 +10,13 @@
     padding: var(--5xl-fs) 0;
   }
 
+  &__title {
+    font-size: var(--2xl-fs);
+    line-height: 1.15;
+    color: var(--color-headings);
+    margin-bottom: var(--2xl-fs);
+  }
+
   &__list {
     list-style-type: none;
     display: flex;
@@ -45,7 +52,7 @@
 
   &__content {
     @include media($bp-mobile) {
-      margin-top: var(--xl-fs);
+      margin-top: var(--5xl-fs);
       text-align: center;
     }
   }

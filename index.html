@@ -119,22 +119,29 @@
               <nav class="features__nav">
                 <ul class="features__list">
                   <li class="features__item">
-                    <button class="btn btn--features btn--active">
+                    <button
+                      class="btn btn--features btn--active"
+                      data-value="0"
+                    >
                       Simple Bookmarking
                     </button>
                   </li>
                   <li class="features__item">
-                    <button class="btn btn--features">Speedy Searching</button>
+                    <button class="btn btn--features" data-value="1">
+                      Speedy Searching
+                    </button>
                   </li>
                   <li class="features__item">
-                    <button class="btn btn--features">Easy Sharing</button>
+                    <button class="btn btn--features" data-value="2">
+                      Easy Sharing
+                    </button>
                   </li>
                 </ul>
               </nav>
               <div class="features__main">
                 <div class="features__image-container">
                   <img
-                    src="./src/assets/images/illustration-hero.svg"
+                    src="./src/assets/images/illustration-features-tab-1.svg"
                     alt="Bookmark app"
                     class="features__image"
                     width="530.117"
@@ -143,7 +150,7 @@
                   <div class="decoration decoration--left">&nbsp;</div>
                 </div>
                 <div class="features__content">
-                  <h3 class="heading__tertiary">Bookmark in one click</h3>
+                  <h3 class="features__title">Bookmark in one click</h3>
                   <p class="features__text">
                     Organize your bookmarks however you like. Our simple
                     drag-and-drop interface gives you complete control over how
