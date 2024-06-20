@@ -65,6 +65,7 @@ export class Features {
     if (!this.contentDOM.image) return;
 
     this.contentDOM.image.setAttribute("src", feature.image_url);
+    this.contentDOM.image.setAttribute("alt", feature.image_alt);
 
     if (!this.contentDOM.title) return;
 
@@ -79,18 +80,21 @@ export class Features {
 const features_data = [
   {
     image_url: "./src/assets/images/illustration-features-tab-1.svg",
+    image_alt: "Bookmark app",
     title: "Bookmark in one click",
     description:
       "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites. ",
   },
   {
     image_url: "./src/assets/images/illustration-features-tab-2.svg",
+    image_alt: "Bookmark speed searching page",
     title: " Intelligent search",
     description:
       "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks. ",
   },
   {
     image_url: "./src/assets/images/illustration-features-tab-3.svg",
+    image_alt: "Bookmark easy sharing page",
     title: "Share your bookmarks",
     description:
       "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button. ",
