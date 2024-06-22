@@ -2,9 +2,7 @@
 @use "./../../abstracts/variables" as *;
 
 .features {
-  &__typography {
-    text-align: center;
-  }
+
 
   &__nav {
     padding: var(--5xl-fs) 0;
@@ -40,7 +38,6 @@
     }
   }
 
-  &__description,
   &__text {
     color: var(--color-universal-dark);
   }

@@ -18,3 +18,10 @@
   color: var(--color-headings);
   margin-bottom: var(--2xl-fs);
 }
+
+.typography-container {
+  text-align: center;
+  &__description {
+    color: var(--color-universal-dark);
+  }
+}
