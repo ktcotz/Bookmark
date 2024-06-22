@@ -1,0 +1,16 @@
+.cta {
+  text-align: center;
+  color: var(--color-neutral);
+  &__subtitle {
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: var(--small-fs);
+    margin-bottom: var(--3xl-fs);
+  }
+
+  &__title {
+    font-size: var(--4xl-fs);
+    font-weight: 500;
+    margin-bottom: var(--2xl-fs);
+  }
+}

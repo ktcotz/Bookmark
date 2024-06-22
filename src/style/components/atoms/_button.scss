@@ -63,4 +63,28 @@
   &__image {
     transition: var(--transition-duration);
   }
+
+  &--primary {
+    align-self: flex-start;
+    padding: var(--large-fs);
+    max-width: 120px;
+    width: 100%;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: var(--small-fs);
+
+    transition: var(--transition-duration);
+    background-color: var(--color-secondary);
+    color: var(--color-neutral);
+
+    @include media($bp-smallest) {
+      max-width: 100%;
+    }
+
+    &:focus-within {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+  }
 }
