@@ -1,3 +1,35 @@
 .faq {
   padding: var(--4xl-fs) 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--large-fs);
+
+  &__item {
+    padding: var(--xl-fs) 0;
+    border-bottom: 1px solid var(--color-universal);
+  }
+
+  &__content {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    color: var(--color-universal-dark);
+
+    transition: var(--transition-duration);
+  }
+
+  &__item--active &__content {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__item--active .btn--faq {
+    margin-bottom: var(--xl-fs);
+  }
+
+  &__item--active .btn__image {
+    transform: rotate(180deg);
+  }
 }

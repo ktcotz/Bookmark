@@ -31,8 +31,6 @@ export class Navigation {
   private manageFocus() {
     const isOpen = this.isOpen();
 
-    console.log(isOpen);
-
     if (isOpen) {
       this.trap?.activate();
     } else {

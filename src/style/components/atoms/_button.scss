@@ -36,4 +36,31 @@
     border-color: var(--color-secondary);
     color: var(--color-headings);
   }
+
+  &--faq {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--large-fs);
+    width: 100%;
+    padding: 4px var(--small-fs);
+    border-radius: 9px;
+    color: var(--color-headings);
+    font-size: var(--large-fs);
+    transition: var(--transition-duration);
+
+    &:focus-within {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    @include media($bp-smallest) {
+      font-size: var(--default-fs);
+      text-align: left;
+    }
+  }
+
+  &__image {
+    transition: var(--transition-duration);
+  }
 }
