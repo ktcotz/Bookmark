@@ -2,7 +2,8 @@
 @use "./../abstracts/variables" as *;
 
 .section-hero,
-.section-download {
+.section-download,
+.section-faq {
   position: relative;
   padding: var(--general-padding) 0;
 

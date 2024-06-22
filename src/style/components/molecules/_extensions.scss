@@ -9,6 +9,7 @@
 
   @include media($bp-mobile) {
     grid-template-columns: 1fr;
+    padding-bottom: 0;
   }
 }
 
