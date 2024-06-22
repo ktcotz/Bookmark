@@ -9,7 +9,8 @@
   padding: 0 var(--default-fs);
 
   &--hero,
-  &--features {
+  &--features,
+  &--extensions {
     @include media($bp-mobile) {
       --width: 35rem;
     }
