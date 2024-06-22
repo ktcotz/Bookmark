@@ -33,6 +33,17 @@
     }
   }
 
+  &--footer {
+    &:link,
+    &:visited {
+      --local-color: hsl(0, 0%, 80%);
+    }
+
+    &:hover {
+      --local-color: var(--color-neutral);
+    }
+  }
+
   &--general {
     &:link,
     &:visited {

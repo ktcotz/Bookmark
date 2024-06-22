@@ -1,0 +1,14 @@
+@use "./../../abstracts/mixins" as *;
+@use "./../../abstracts/variables" as *;
+
+.socials {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--large-fs);
+  list-style-type: none;
+
+  @include media($bp-mobile) {
+    margin-left: 0;
+  }
+}

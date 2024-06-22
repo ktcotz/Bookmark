@@ -6,6 +6,7 @@
 
 @use "./layout/header" as *;
 @use "./layout/navigation" as *;
+@use "./layout/footer" as *;
 
 @use "./components/molecules/wrapper" as *;
 @use "./components/molecules/hero" as *;
@@ -14,6 +15,7 @@
 @use "./components/molecules/faq" as *;
 @use "./components/molecules/form" as *;
 @use "./components/molecules/cta" as *;
+@use "./components/molecules/socials" as *;
 
 @use "./components/atoms/logo" as *;
 @use "./components/atoms/link" as *;
