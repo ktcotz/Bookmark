@@ -14,6 +14,7 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
-    "focus-trap": "^7.5.4"
+    "focus-trap": "^7.5.4",
+    "zod": "^3.23.8"
   }
 }
