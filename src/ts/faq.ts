@@ -33,10 +33,26 @@ export class Faq {
     this.toggleActiveFaq();
   }
 
+  private disexpandedAlLButtons() {
+    this.faqOpenButtons.forEach((button) => {
+      button.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  private handleButtonActiveState(button: HTMLButtonElement) {
+    this.disexpandedAlLButtons();
+
+    button.setAttribute(
+      "aria-expanded",
+      `${Boolean(this.currentOpenFaq) ? "true" : "false"}`
+    );
+  }
+
   private addEventListeners() {
     this.faqOpenButtons.forEach((button) => {
       button.addEventListener("click", () => {
         this.handleActiveFaq(button);
+        this.handleButtonActiveState(button);
       });
     });
   }
