@@ -54,6 +54,10 @@ html {
   }
 }
 
+#app {
+  overflow-x: hidden;
+}
+
 body {
   line-height: 1.5;
   font-family: var(--primary-font-family);
