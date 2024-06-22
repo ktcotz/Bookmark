@@ -87,4 +87,8 @@
       outline-offset: 2px;
     }
   }
+
+  &--sended {
+    --color-secondary: hsl(142, 72%, 29%);
+  }
 }
