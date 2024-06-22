@@ -1,0 +1,6 @@
+.extensions {
+  padding: var(--general-padding) 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--3xl-fs);
+}
